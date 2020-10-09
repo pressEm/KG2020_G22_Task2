@@ -34,22 +34,33 @@ public class DrawPanel extends JPanel implements MouseMotionListener {
 //        LineDrawer ld = new GraphicsLineDrawer(gr);
         PixelDrawer pd = new GraphicsPixelDrawer(gr);
 //        LineDrawer ld = new DDALineDrawer(pd);
-        LineDrawer ld = new BresenhamLineDrawer(pd);
-//        LineDrawer ld = new WuLineDrawer(pd);
-        gr.setColor(Color.black);
+//        LineDrawer ld = new BresenhamLineDrawer(pd);
+        LineDrawer ld = new WuLineDrawer(pd);
         drawAll(ld);
+        gr.setColor(new Color(0x00F7FF));
+        gr.drawLine(200,200,200,200);
 
+//        gr.setColor(new Color(0x0000DA));
+//        gr.drawLine(200, 200, 500, 100);
         g.drawImage(bf, 0, 0, null);
         gr.dispose();
     }
 
     public void drawAll(LineDrawer ld) {
 //
-//        snowFlake(ld, 200, 200, 80, 28);
+        snowFlake(ld, 200, 200, 80, 68);
 //
-        ld.drawLine(100, 100, 200, 150);
+//        ld.drawLine(200, 100, 214, 110);
 //        ld.drawLine(300, 300, 300, 500);
-//        ld.drawLine(300, 300, 500, 300);
+//        ld.drawLine(110, 100, 100, 150);
+//        ld.drawLine(100, 200, 400, 150);
+//        ld.drawLine(100, 200, 400, 180);
+//        ld.drawLine(100, 200, 150, 100);
+
+
+
+//        ld.drawLine(100, 100, 400, 120);
+
 
 //        ld.drawLine(getWidth() / 2, getHeight() / 2, (int) position.getX(), (int) position.getY());
 //        DDALineDrawer l = new DDALineDrawer()
